@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    color: #00d9ff;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+button.opciones {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(145deg, #2c3e50, #34495e);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.opciones:hover {
+    background-color: #00d9ff;
+    transform: translateY(-3px);
+}
+
+#opcionesDefecto {
+    display: none;
+}
+
+#opcionesPersonalizadas {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.grid-container button {
+    color: white;
+    background-color: #3b3b98;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.grid-container button:hover {
+    background-color: #4cd137;
+    transform: scale(1.08);
+}
+
+#time {
+    font-size: 4rem;
+    margin-top: 20px;
+    color: #00ff9d;
+    text-shadow: 0 0 15px rgba(0, 255, 157, 0.7);
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(145deg, #e74c3c, #c0392b);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    background-color: #ff7675;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button.opciones {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #time {
+        font-size: 3rem;
+    }
+}

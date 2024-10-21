@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="source.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <h1>Temporizador</h1>
+    <div>
+        <button class="opciones">Tiempos personalizados</button>
+        <button class="opciones">Tiempos por defecto</button>
+    </div>
+    <div id="opcionesPersonalizadas">
+        <h3>Tiempos personalizados</h3>
+        <label for="hour">Horas</label>
+        <input type="number" id="hour" min="0" max="23">
+        <label for="minute">Minutos</label>
+        <input type="number" id="minute" min="0" max="59">
+        <label for="second">Segundos</label>
+        <input type="number" id="second" min="0" max="59">
+    </div>
+    <div id="opcionesDefecto">
+        <h3>Tiempos por defecto:</h3>
+        <div class="grid-container">
+            <button id="15s">15 segundos</button>
+            <button id="30s">30 segundos</button>
+            <button id="1m">01 minuto</button>
+            <button id="15m">15 minutos</button>
+            <button id="1h">01 hora</button>
+            <button id="15h">15 horas</button>
+            <button id="1d">01 día</button>
+        </div>
+    </div>
+    <div>
+        <p id="time">00:00:00</p>
+    </div>
+    <div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+    </div>
+    <audio id="alert-sound" src="clock-tick.mp3" preload="auto"></audio>
+    <canvas id="confetti-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+</body>
+</html>
